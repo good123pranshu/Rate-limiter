@@ -1,9 +1,11 @@
 from redis import Redis
-from app.config import REDIS_HOST, REDIS_PORT, REDIS_PASSWORD
+from app.config import REDIS_URL
 
-redis_client = Redis(
-    host=REDIS_HOST,
-    port=REDIS_PORT,
-    password=REDIS_PASSWORD,
+
+from redis import Redis
+
+redis_client = Redis.from_url(
+    REDIS_URL,   
     decode_responses=True
 )
+

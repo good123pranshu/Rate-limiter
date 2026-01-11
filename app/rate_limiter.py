@@ -1,6 +1,6 @@
 import time
 from app.redis_client import redis_client
-from app.config import RATE_LIMIT,RATE_WINDOW
+from app.config import RATE_LIMIT,RATE_WINDOW\
 
 MAX_TOKENS = RATE_LIMIT 
 TTL = RATE_WINDOW             

@@ -1,4 +1,4 @@
-from app.limiter import is_allowed
+from app.rate_limiter import is_allowed
 
 def test_rate_limiter():
     identifier = "test-user"
