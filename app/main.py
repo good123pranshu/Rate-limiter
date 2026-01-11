@@ -2,7 +2,12 @@ from fastapi import FastAPI, Request, HTTPException
 from app.rate_limiter import is_allowed
 from fastapi.responses import JSONResponse
 
+
 app = FastAPI(title="Redis Rate Limiter")
+import os
+
+REDIS_URL = os.environ.get("REDIS_URL", "") 
+
 
 @app.middleware("http")
 async def rate_limit_middleware(request: Request, call_next):

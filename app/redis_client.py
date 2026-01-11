@@ -1,8 +1,9 @@
 from redis import Redis
 from app.config import REDIS_URL
+import os
 
 
-from redis import Redis
+
 
 redis_client = Redis.from_url(
     REDIS_URL,   

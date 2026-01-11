@@ -1,6 +1,9 @@
 import os
+from dotenv import load_dotenv
 
-REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0") 
+load_dotenv()
+REDIS_URL =os.environ.get("REDIS_URL", "") 
+
 
 
 RATE_LIMIT = 10    
